@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://quizmasterbackend-j6qi.onrender.com',
+  apiUrl: 'https://quizmasterbackend-j6qi.onrender.com/api',
 };
