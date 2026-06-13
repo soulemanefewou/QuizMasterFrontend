@@ -1,0 +1,17 @@
+<div class="app-container">
+  <app-header></app-header>
+
+  <div class="app-body" *ngIf="authService.isAuthenticated()">
+    <app-sidebar></app-sidebar>
+    <div class="sidebar-overlay" (click)="closeSidebarMobile()"></div>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <main class="main-content main-full" *ngIf="!authService.isAuthenticated()">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer></app-footer>
+</div>
